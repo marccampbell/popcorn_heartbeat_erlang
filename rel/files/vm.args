@@ -1,0 +1,21 @@
+## Name of the node, must be included in the local autocomplete.cfg file in order for the
+## server to load its dataset and become available as part of a consumer or pro serach
+## cluster
+-name popcorn_heartbeat_erlang@anduin.tigertext.me
+
+## Cookie for distributed erlang
+-setcookie POPCORN
+
+## Heartbeat management; auto-restarts VM if it dies or becomes unresponsive
+## (Disabled by default..use with caution!)
+##-heart
+
+## Enable kernel poll and a few async threads
++K true
++A 5
+
+## Increase number of concurrent ports/sockets
+-env ERL_MAX_PORTS 4096
+
+## Tweak GC to run more often
+-env ERL_FULLSWEEP_AFTER 10

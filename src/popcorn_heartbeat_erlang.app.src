@@ -1,0 +1,11 @@
+{application, popcorn_heartbeat_erlang,
+ [
+  {description, "Popcorn heartbeat"},
+  {vsn, "0.0.1"},
+  {id, "popcorn_heartbeat_erlang"},
+  {registered,   []},
+  {applications, [kernel,stdlib]},
+  {mod, {popcorn_heartbeat_erlang, []}},
+  {env, []}
+ ]
+}.
