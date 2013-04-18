@@ -11,10 +11,10 @@ start() ->
     application:start(?MODULE).
 
 start(_StartType, _StartArgs) ->
-    ok.
+    popcorn_heartbeat_sup:start_link().
 
 stop() ->
     application:stop(?MODULE).
 
 stop(_State) ->
-    erlang:halt(1).
+    ok.

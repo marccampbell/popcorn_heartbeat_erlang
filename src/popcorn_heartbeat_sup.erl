@@ -1,4 +1,4 @@
--module(heartbeat_sup).
+-module(popcorn_heartbeat_sup).
 -author('mhald@mac.com').
 
 -behaviour(supervisor).
@@ -13,5 +13,5 @@ start_link() ->
 -spec init([]) -> {ok, {{one_for_one, 5, 60}, [supervisor:child_spec()]}}.
 init([]) ->
   {ok, {{one_for_one, 5, 60}, [
-	   {heartbeat, {heartbeat, start_link, []}, permanent, 2000, worker, [heartbeat]}
+	   {popcorn_heartbeat, {popcorn_heartbeat, start_link, []}, permanent, 2000, worker, [popcorn_heartbeat]}
   ]}}.
